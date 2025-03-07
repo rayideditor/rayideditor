@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rayid - Video Editor Portfolio</title>
+
+  <!-- Favicon (optional) -->
+  <link rel="icon" href="skull.svg" type="image/svg+xml" />
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Three.js -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/three.js/95/three.min.js"
+    integrity="sha512-UmfbvG5m/DHC9U+18ytxInR41chHjvY5NX+Sd7GB16iO6xhyQ94pqUR+L0rFUqBqOcG7S4Ej1alx/dHz3cIhtA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <!-- Google Font: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Your Scripts -->
+  <script src="script.js" type="text/javascript"></script>
+  <script src="3D.js" type="text/javascript"></script>
+
+  <!-- Meta Data -->
+  <meta
+    name="description"
+    content="Video Editor Portfolio - Showcasing Works, Services, and Contact Info"
+  />
+  <meta property="og:title" content="Rayid Ali | Video Editor Portfolio" />
+  <meta
+    property="og:description"
+    content="Professional video editing services, portfolio samples, and contact information."
+  />
+</head>
+
+<body>
+  <!-- ========== NAV MENU ========== -->
+  <div id="mainMenu" class="mainColorBackground-blur">
+    <div class="mainMenu-container">
+      <!-- Left side menu -->
+      <div class="mainMenu-menu">
+        <ul class="menu-options">
+          <!-- Adjust these links to match your sections -->
+          <li><a class="menuOption darkText unselectable" href="#landing">Home</a></li>
+          <li><a class="menuOption darkText unselectable" href="#works">Works</a></li>
+          <li><a class="menuOption darkText unselectable" href="#about">About</a></li>
+          <li><a class="menuOption darkText unselectable" href="#services">Services</a></li>
+          <li><a class="menuOption darkText unselectable" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <!-- Right side menu (currently unused) -->
+      <div class="mainMenu-links">
+        <ul class="links-options">
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hamburger buttons -->
+  <div id="hamburgerClose" class="menuButton unselectable">
+    <div class="xline xline-t darkBackground"></div>
+    <div class="xline xline-b darkBackground"></div>
+  </div>
+  <div id="hamburgerOpen" class="menuButton unselectable">
+    <div class="mline whiteBackground"></div>
+    <div class="mline whiteBackground"></div>
+    <div class="mline whiteBackground"></div>
+  </div>
+
+  <!-- Side bar indicator (section label) -->
+  <div class="utility-sidebar">
+    <div id="vSectionIndicator" class="vertical-section-indicator whiteText unselectable">
+      landing
+    </div>
+  </div>
+
+  <!-- Night mode toggle -->
+  <div id="night-mode-toggle" class="unselectable">
+    <svg
+      id="night-mode-icon"
+      class="whiteSVGFill"
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      xmlns="http://www.w3.org/2000/svg"
+    ></svg>
+  </div>
+
+  <!-- ========== LANDING SECTION ========== -->
+  <div data-id="landing" id="landing" class="switch">
+    <!-- 3D grid container (transparent) -->
+    <div id="scene-container" class="bg"></div>
+    <div class="fg">
+      <div class="landing-text">
+        <h1 class="animateEntry">
+          Hello, I am <span class="mainColorText emphasis">Rayid</span>
+        </h1>
+        <h2 class="animateEntry">I am a video editor based in NYC.</h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Invisible marker for color change on scroll -->
+  <div id="changeNavColor"></div>
+
+  <!-- ========== CONTENT ========== -->
+  <div class="contents">
+    <!-- ===== WORKS (Horizontal Scrolling) ===== -->
+    <div data-id="works" id="works" class="switch"></div>
+    <div class="section-withStickyIndicator fadeInUp">
+      <div class="stickySectionIndicator-container">
+        <div class="stickySectionIndicator-heading">WORKS</div>
+      </div>
+
+      <!-- Horizontal scroll container -->
+      <div class="works-horizontal" id="worksContainer">
+        <!-- Optional arrow or text on the side -->
+        <div
+          class="works-spacer lightText unselectable"
+          style="text-align:right; margin-top:32vh; font-size:2em"
+        >
+          &nbsp; ←
+        </div>
+
+        <!-- Work 1 -->
+        <div class="work card3D">
+          <a
+            class="imageLink"
+            href="https://www.youtube.com/watch?v=q7IGqgNBSjU"
+            target="_blank"
+          >
+            <!-- 16:9 ratio container -->
+            <div
+              class="work-img aspectSixteenNine"
+              style="background-image:url('thumbnail1.jpg')"
+            ></div>
+          </a>
+          <div class="work-description addBlur">
+            <h2 class="darkText">Harvey in China (30k+ Subscribers)</h2>
+            <p class="readingText">
+              A sample from a YouTube travel channel I edited, highlighting
+              cultural exploration and fast-paced storytelling.
+            </p>
+            <div class="spacer"></div>
+            <!-- Optional: text link if you prefer -->
+            <a
+              href="https://www.youtube.com/watch?v=q7IGqgNBSjU"
+              class="linkWithArrow darkText"
+              target="_blank"
+            >
+              Watch
+            </a>
+          </div>
+        </div>
+
+        <!-- Work 2 -->
+        <div class="work card3D">
+          <a
+            class="imageLink"
+            href="https://www.tiktok.com/@justrayid/video/7228716937281391915?is_from_webapp=1&sender_device=pc&web_id=7478865664385173038"
+            target="_blank"
+          >
+            <div
+              class="work-img aspectSixteenNine"
+              style="background-image:url('thumbnail2.png')"
+            ></div>
+          </a>
+          <div class="work-description addBlur">
+            <h2 class="darkText">Viral TikTok (36k+ views)</h2>
+            <p class="readingText">
+              A short, snappy video that garnered over 30k views on TikTok –
+              focusing on quick cuts and trending audio.
+            </p>
+            <div class="spacer"></div>
+            <a
+              href="https://www.tiktok.com/@justrayid/video/7228716937281391915?is_from_webapp=1&sender_device=pc&web_id=7478865664385173038"
+              class="linkWithArrow darkText"
+              target="_blank"
+            >
+              View
+            </a>
+          </div>
+        </div>
+
+        <!-- Work 3 -->
+        <div class="work card3D">
+          <a
+            class="imageLink"
+            href="https://www.instagram.com/reel/DGELxnkyG8d/?igsh=MXRsbXEwczh3ZjRheg=="
+            target="_blank"
+          >
+            <div
+              class="work-img aspectSixteenNine"
+              style="background-image:url('thumbnail3.png')"
+            ></div>
+          </a>
+          <div class="work-description addBlur">
+            <h2 class="darkText">Instagram Edit</h2>
+            <p class="readingText">
+              An Instagram edit that showcases dynamic transitions and
+              color grading for maximum impact.
+            </p>
+            <div class="spacer"></div>
+            <a
+              href="https://www.instagram.com/reel/DGELxnkyG8d/?igsh=MXRsbXEwczh3ZjRheg=="
+              class="linkWithArrow darkText"
+              target="_blank"
+            >
+              Watch
+            </a>
+          </div>
+        </div>
+
+        <!-- Work 4 -->
+        <div class="work card3D">
+          <a
+            class="imageLink"
+            href="https://www.youtube.com/watch?v=2tuloxITS10"
+            target="_blank"
+          >
+            <div
+              class="work-img aspectSixteenNine"
+              style="background-image:url('thumbnail4.png')"
+            ></div>
+          </a>
+          <div class="work-description addBlur">
+            <h2 class="darkText">Rivalin Esports</h2>
+            <p class="readingText">
+              High-energy gaming content edit for a YouTube Esports channel,
+              featuring motion graphics and hype music.
+            </p>
+            <div class="spacer"></div>
+            <a
+              href="https://www.youtube.com/watch?v=2tuloxITS10s"
+              class="linkWithArrow darkText"
+              target="_blank"
+            >
+              Watch
+            </a>
+          </div>
+        </div>
+
+        <!-- Spacer at the end -->
+        <div class="works-spacer">
+          &nbsp;
+        </div>
+      </div>
+
+      <!-- Single progress bar (to show horizontal scroll progress) -->
+      <div class="horizontal-scroll-progress-container">
+        <span class="scrollHint readingText">Scroll horizontally</span>
+        <div class="progressBarOuter">
+          <div class="progressBarInner" id="worksProgress"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ABOUT ===== -->
+    <div data-id="about" id="about" class="switch"></div>
+    <div class="section-withStickyIndicator fadeInUp">
+      <div class="stickySectionIndicator-container">
+        <div class="stickySectionIndicator-heading">ABOUT ME</div>
+      </div>
+      <div class="row">
+        <!-- Profile image (optional) -->
+        <div class="col col-30 fadeInUp card3D">
+          <div class="profile-image-container aspectSquare">
+            <img
+              src="rayid.jpg"
+              alt="Rayid"
+              class="profile-img"
+            />
+          </div>
+        </div>
+        <div class="col col-50 addBlur fadeInUp">
+          <div class="about-text">
+            <p class="readingText">
+              I’m a Computer Science master’s graduate living in New York City.
+              I’ve been video editing since I was 12 years old, and over the
+              years I’ve honed my craft using industry-standard tools like 
+              Adobe Premiere Pro, Adobe After Effects, DaVinci Resolve, and 
+              Final Cut Pro. I’ve worked as a freelance video editor for 
+              various clients, handling everything from quick social media
+              clips to full-length documentary-style content. <br /><br />
+              When I'm not editing, you’ll find me exploring the city, 
+              brainstorming new content ideas, or doomscrolling.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== SERVICES ===== -->
+    <div data-id="services" id="services" class="switch"></div>
+    <div class="section-withStickyIndicator fadeInUp">
+      <div class="stickySectionIndicator-container">
+        <div class="stickySectionIndicator-heading">SERVICES</div>
+      </div>
+      <div class="services-container">
+        <!-- Editing -->
+        <div class="service card3D fadeInUp">
+          <div class="service-icon">🎬</div>
+          <h2 class="darkText">Editing</h2>
+          <p class="readingText">
+            I have been a freelance video editor for 6 years now, using tools
+            like Adobe Premiere Pro, After Effects, DaVinci Resolve, and Final
+            Cut Pro. My focus is on storytelling, pacing, and seamless
+            transitions, ensuring each video feels both polished and engaging.
+          </p>
+        </div>
+        <!-- Color Grading -->
+        <div class="service card3D fadeInUp">
+          <div class="service-icon">🎨</div>
+          <h2 class="darkText">Color Grading</h2>
+          <p class="readingText">
+            I specialize in color grading to create a cinematic or stylized look.
+            From matching multi-camera shots to accentuating mood and tone,
+            I’ll make your video stand out with vibrant, accurate, and
+            consistent colors.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== CONTACT ===== -->
+    <div data-id="contact" id="contact" class="switch"></div>
+    <div class="section-withStickyIndicator fadeInUp">
+      <div class="contact-container">
+        <ul>
+          <li>
+            <a href="mailto:rayidali3@gmail.com" class="darkText">Email</a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/justrayid"
+              class="darkText"
+              target="_blank"
+            >
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.tiktok.com/@justrayid"
+              class="darkText"
+              target="_blank"
+            >
+              TikTok
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <p class="lightText" style="text-align: center;">
+      &copy; <span id="year">2025</span> Rayid
+    </p>
+  </footer>
+</body>
+</html>
